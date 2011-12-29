@@ -7,6 +7,7 @@ var tabGroup = Titanium.UI.createTabGroup();
 
 //
 // create base UI tab and root window
+// TEST
 //
 var win1 = Titanium.UI.createWindow({  
     title:'Tab 1',
