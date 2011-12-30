@@ -19,6 +19,7 @@ function loadTweets()
 			var tweet = tweets[i].text; // The tweet message
 			var user = tweets[i].user.screen_name; // The screen name of the user
 			var avatar = tweets[i].user.profile_image_url; // The profile image
+			//ar location = tweets[i].geo.place_id;
 			// Create a row and set its height to auto
 			var row = Titanium.UI.createTableViewRow({height:'auto'});
 
