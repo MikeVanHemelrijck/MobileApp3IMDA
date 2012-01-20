@@ -9,7 +9,7 @@ function loadTweets()
 	// Create our HTTP Client and name it "loader"
 	var loader = Titanium.Network.createHTTPClient();
 	// Sets the HTTP request method, and the URL to get data from
-	loader.open("GET","http://api.twitter.com/1/statuses/user_timeline.json?screen_name=rihanna");
+	loader.open("GET","http://search.twitter.com/search.json?q=%23rihanna");
 	// Runs the function when the data is ready for us to process
 	loader.onload = function() 
 	{
@@ -17,7 +17,7 @@ function loadTweets()
 		for (var i = 0; i < tweets.length; i++)
 		{
 			var tweet = tweets[i].text; // The tweet message
-			var user = tweets[i].user.screen_name; // The screen name of the user
+			var user = tweets[i].user.location; // The screen name of the user
 			var avatar = tweets[i].user.profile_image_url; // The profile image
 			// Create a row and set its height to auto
 			var row = Titanium.UI.createTableViewRow({height:'auto'});
