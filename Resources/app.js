@@ -1,4 +1,5 @@
 // Project ----------------------------------------------------------------------------------------
+//TEST
     // Creates a tab group with Titanium.UI API.  
     var tabGroup = Titanium.UI.createTabGroup();  
       
