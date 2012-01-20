@@ -9,15 +9,15 @@ function loadTweets()
 	// Create our HTTP Client and name it "loader"
 	var loader = Titanium.Network.createHTTPClient();
 	// Sets the HTTP request method, and the URL to get data from
-	loader.open("GET","http://search.twitter.com/search.json?q=%23rihanna");
+	loader.open("GET","http://api.twitter.com/1/statuses/user_timeline.json?screen_name=Lessius");
 	// Runs the function when the data is ready for us to process
 	loader.onload = function() 
 	{
 		var tweets = eval('('+this.responseText+')');
 		for (var i = 0; i < tweets.length; i++)
 		{
-			var tweet = tweets[i].text; // The tweet message
-			var user = tweets[i].user.location; // The screen name of the user
+			var date = tweets[i].created_at; // The tweet message
+			var user = tweets[i].user.screen_name; // The screen name of the user
 			var avatar = tweets[i].user.profile_image_url; // The profile image
 			// Create a row and set its height to auto
 			var row = Titanium.UI.createTableViewRow({height:'auto'});
@@ -43,7 +43,7 @@ function loadTweets()
 			// Create the label to hold the screen name
 			var user_lbl = Titanium.UI.createLabel({
 				text:user,
-				left:54,
+				left:60,
 				width:120,
 				top:-48,
 				bottom:2,
@@ -54,17 +54,16 @@ function loadTweets()
 			});
 			post_view.add(user_lbl);
 			// Create the label to hold the tweet message
-			var tweet_lbl = Titanium.UI.createLabel({
-				text:tweet,
-				left:54,
+			var date_lbl = Titanium.UI.createLabel({
+				text:date,
+				left:60,
 				top:0,
-				bottom:2,
 				height:'auto',
 				width:236,
 				textAlign:'left',
 				font:{fontSize:14}
 			});
-			post_view.add(tweet_lbl);
+			post_view.add(date_lbl);
 			// Add the post view to the row
 			row.add(post_view);
 			// Give each row a class name
