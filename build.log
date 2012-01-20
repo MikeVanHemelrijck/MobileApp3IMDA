@@ -5,15 +5,12 @@ Logfile initialized
 [INFO] Titanium SDK version: 1.7.3 (10/17/11 13:44 dcf4257)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 10 seconds)
-[DEBUG] waited 10.064000 seconds on emulator to get ready
-[INFO] Waiting for the Android Emulator to become available
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.022000 seconds on emulator to get ready
 [DEBUG] com.yourcompanyname.mobileapp installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\Resources\app.js => C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\build\android\bin\assets\Resources\app.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\Resources\login.js => C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\build\android\bin\assets\Resources\login.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [INFO] Waiting for SDCard to become available..
