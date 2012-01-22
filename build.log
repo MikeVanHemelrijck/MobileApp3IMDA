@@ -1,33 +1,24 @@
 Logfile initialized
-[INFO] logfile = C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\build.log
-[DEBUG] C:\Users\Bram\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\builder.py simulator MobileApp C:\Program Files (x86)\Android\android-sdk-windows C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA com.yourcompanyname.mobileapp 7 HVGA
+[INFO] logfile = C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build.log
+[DEBUG] C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\builder.py simulator MobileApp C:\Program Files\Android\android-sdk C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp com.yourcompanyname.mobileapp 7 HVGA
 [INFO] Building MobileApp for Android ... one moment
 [INFO] Titanium SDK version: 1.7.3 (10/17/11 13:44 dcf4257)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
-<<<<<<< HEAD
-[DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.331000 seconds on emulator to get ready
-[DEBUG] com.yourcompanyname.mobileapp installed? True
-[INFO] Fastdev server running, deploying in Fastdev mode
-[INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\tweets.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\tweets.js
-=======
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 10 seconds)
-[DEBUG] waited 10.064000 seconds on emulator to get ready
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 15 seconds)
+[DEBUG] waited 16.419000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.yourcompanyname.mobileapp installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\Resources\app.js => C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\build\android\bin\assets\Resources\app.js
->>>>>>> a83f77aebcd6e9b984d3dc4ecba63b64914deb7f
+[TRACE] COPYING MODIFIED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\overview.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\overview.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [INFO] Waiting for SDCard to become available..
 [INFO] Re-launching application ... MobileApp
 [INFO] Launching application ... MobileApp
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.yourcompanyname.mobileapp/.MobileappActivity }
-Warning: Activity not started, its current task has been brought to the front
 
