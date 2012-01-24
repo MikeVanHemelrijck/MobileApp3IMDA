@@ -86,12 +86,12 @@ overviewReq.onload = function()
     if (response.status == "true")  
     {  
     	var rows = [];
-		for(var i = 0; i < response.length; i++)
+		
+		for(var i = 1; i < (response.length + 1); i++)
 		{
 				var row = Titanium.UI.createTableViewRow({
 					className: 'table1Class',
-					title: response.title,
-					projectId: response.id
+					title: response.title[i]
 				});
 				rows.push(row);
 		}

@@ -9,7 +9,7 @@ Logfile initialized
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 15 seconds)
-[DEBUG] waited 16.419000 seconds on emulator to get ready
+[DEBUG] waited 16.343000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.yourcompanyname.mobileapp installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
@@ -21,4 +21,5 @@ Logfile initialized
 [INFO] Re-launching application ... MobileApp
 [INFO] Launching application ... MobileApp
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.yourcompanyname.mobileapp/.MobileappActivity }
+Warning: Activity not started, its current task has been brought to the front
 
