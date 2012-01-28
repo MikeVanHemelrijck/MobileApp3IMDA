@@ -1,29 +1,24 @@
 Titanium.UI.currentWindow.setBackgroundColor('#000');
 
-var lblWelcome = Ti.UI.createLabel({
-  text:"Welcome to MobileApp, fill in these fields to register!",
-  top: 12,
-  width: "80%",
-  height: 40,
-  left: "10%",
-  color: '#fff',
-  textAlign: 'center',
+var logo = Titanium.UI.createImageView({
+	url: 'http://www.vhdesign.be/School/Mobiel/logo.jpg',
+	width: 320,
+	height: 61,
+	top: 50,
 })
 
 var labelusername = Ti.UI.createLabel({
   text:"Username:",
-  top: 60,
-  left: 30,
+  top: 180,
+  left: 20,
   width: "30%",
   height: 25,
   color: '#fff',  
 })
-
-// username textfield
 var txtUsername = Ti.UI.createTextField({
   height:45,
-  top: 50,
-  left: 120,
+  top: 170,
+  right: 25,
   width: "60%",
   color: '#000',
   textAlign: 'left',
@@ -36,17 +31,17 @@ var txtUsername = Ti.UI.createTextField({
 
 var labelpassword = Ti.UI.createLabel({
   text:"Password:",
-  top: 110,
-  left: 30,
+  top: 230,
+  left: 20,
   width: "30%",
   height: 25,
   color: '#fff',
 })
-// password textfield
+
 var txtPassword = Ti.UI.createTextField({
 	height:45,
-	top : 100,
-	left : 120,
+	top : 220,
+	right: 25,
 	width : '60%',
 	hintText : 'password',
 	color: '#000',
@@ -58,22 +53,19 @@ var txtPassword = Ti.UI.createTextField({
     returnKeyType:Titanium.UI.RETURNKEY_DEFAULT
 });
 
-var btnlogin = Ti.UI.createButton({
+var btnregister = Ti.UI.createButton({
   title:"Register",
-  top: 170,
-  width: "80%",
-  height: 40,
-  left: "10%",
-  font:{fontFamily:'Arial',fontWeight:'bold',fontSize:14}  
+  bottom: 80,
+  width: '90%',
+  height: 60,
+  left: 15, 
 })
-
 var btnBack = Ti.UI.createButton({
   title:"Back",
-  top: 220,
-  width: "80%",
-  height: 40,
-  left: "10%",
-  font:{fontFamily:'Arial',fontWeight:'bold',fontSize:14}  
+  bottom: 20,
+  width: '90%',
+  height: 60,
+  left: 15, 
 })
 
 var loginReq = Titanium.Network.createHTTPClient();  
@@ -83,47 +75,37 @@ loginReq.onload = function()
     alert("Succesfully registered!");
     txtPassword.value="";
     txtUsername.value="";
+    
+    var winLogin = Titanium.UI.createWindow({  
+    backgroundColor:'#000',
+    url:'login.js',
+    });
+    winLogin.open();
 };
 loginReq.onerror = function()  
 { 
 	alert("Could not connect to server."); 
 };
-btnlogin.addEventListener('click',function(e)  
-{  
-    if (txtUsername.value != '' && txtPassword.value != '')  
-    {        
-       loginReq.open('GET','http://www.vhdesign.be/School/Mobiel/register.php?username='+txtUsername.value+'&password='+txtPassword.value); 
-       loginReq.send();
-    }  
-    else  
-    {  
-        alert("Username/Password are required");  
-    }  
-}); 
 
 btnBack.addEventListener('click',function(e)  
 {  
   Titanium.UI.currentWindow.close();
 }); 
-
-Ti.App.addEventListener('gotoOverview', function(event)  
-{   
-    var win = Titanium.UI.createWindow({url:'overview.js'});
-    //win.modal=true;
-    win.title="Welcome, "+event.name;
-    win.id=event.id;
-    win.open();
-    //winLogin.close();
+btnregister.addEventListener('click',function(e)
+{
+    if (txtUsername.value != '' && txtPassword.value != '')
+    {
+       loginReq.open('GET','http://www.vhdesign.be/School/Mobiel/register.php?username='+txtUsername.value+'&password='+txtPassword.value);
+       loginReq.send();
+    }
+    else
+    {
+        alert("Username/Password are required");
+    }
 }); 
-/*
-Ti.App.addEventListener('gotoAddTask', function(event)  
-{   
-    var win = Titanium.UI.createWindow({url:'addTask.js'});
-    win.open();
-});
-*/
-Titanium.UI.currentWindow.add(lblWelcome);
-Titanium.UI.currentWindow.add(btnlogin);
+
+Titanium.UI.currentWindow.add(logo);
+Titanium.UI.currentWindow.add(btnregister);
 Titanium.UI.currentWindow.add(btnBack);
 Titanium.UI.currentWindow.add(txtPassword);
 Titanium.UI.currentWindow.add(txtUsername);

@@ -1,15 +1,15 @@
 Titanium.UI.currentWindow.setBackgroundColor('#000');
 
 var logo = Titanium.UI.createImageView({
-	url: 'http://www.vhdesign.be/School/Mobiel/splash.jpg',
-	width: 235,
-	height: 200,
-	top: 5,
+	url: 'http://www.vhdesign.be/School/Mobiel/logo.jpg',
+	width: 320,
+	height: 61,
+	top: 50,
 })
 
 var labelusername = Ti.UI.createLabel({
   text:"Username:",
-  top: 260,
+  top: 180,
   left: 20,
   width: "30%",
   height: 25,
@@ -18,8 +18,8 @@ var labelusername = Ti.UI.createLabel({
 
 var txtUsername = Ti.UI.createTextField({
   height:45,
-  top: 250,
-  right: 10,
+  top: 170,
+  right: 25,
   width: "60%",
   color: '#000',
   textAlign: 'left',
@@ -32,7 +32,7 @@ var txtUsername = Ti.UI.createTextField({
 
 var labelpassword = Ti.UI.createLabel({
   text:"Password:",
-  top: 310,
+  top: 230,
   left: 20,
   width: "30%",
   height: 25,
@@ -41,8 +41,8 @@ var labelpassword = Ti.UI.createLabel({
 
 var txtPassword = Ti.UI.createTextField({
 	height:45,
-	top : 300,
-	right: 10,
+	top : 220,
+	right: 25,
 	width : '60%',
 	hintText : 'password',
 	color: '#000',
@@ -56,19 +56,17 @@ var txtPassword = Ti.UI.createTextField({
 
 var btnlogin = Ti.UI.createButton({
   title:"Login",
-  top: 360,
-  width: "30%",
-  height: 40,
-  right: 10,
-  font:{fontFamily:'Arial',fontWeight:'bold',fontSize:14}  
+  bottom: 80,
+  width: '90%',
+  height: 60,
+  left: 15, 
 })
 var btnregister = Ti.UI.createButton({
-  title:"Register",
-  top: 360,
-  width: "30%",
-  height: 40,
-  right: 110,
-  font:{fontFamily:'Arial',fontWeight:'bold',fontSize:14}  
+  title:"Create account",
+  bottom: 20,
+  width: '90%',
+  height: 60,
+  left: 15, 
 })
 
 var loginReq = Titanium.Network.createHTTPClient();  
@@ -109,12 +107,59 @@ btnlogin.addEventListener('click',function(e)
     }  
 }); 
 
+btnregister.addEventListener('click',function(e)  
+{ 
+	var winReg = Titanium.UI.createWindow({  
+    backgroundColor:'#000',
+    url:'register.js',
+  });
+  winReg.open();
+});
+
 Ti.App.addEventListener('gotoOverview', function(event)  
 {   
-    var win = Titanium.UI.createWindow({url:'overview.js', name:event.name});
-    win.title=event.name + "'s Inbox";
-    win.id=event.id;
-    win.open();
+  
+  var tabGroup = Titanium.UI.createTabGroup({id:'tabGroupMain'});
+
+  var winInbox = Titanium.UI.createWindow({  
+    url:'overview.js',
+    backgroundColor:'#000',
+    name: event.name
+  });
+  var winAdditem = Titanium.UI.createWindow({  
+    url:'additem.js',
+    backgroundColor:'#000',
+    name: event.name
+  });
+  var winBack = Titanium.UI.createWindow({  
+    url:'logout.js',
+    backgroundColor:'#000',
+    name: event.name
+  });
+
+  var tab1 = Titanium.UI.createTab({
+	id:'tab1',
+	title:'Inbox',
+	window:winInbox
+  });
+  var tab2 = Titanium.UI.createTab({
+	id:'tab2',
+	title:'New Msg',
+	window:winAdditem
+  });
+  var tab3 = Titanium.UI.createTab({
+	id:'tab2',
+	title:'Log out',
+	window:winBack
+  });
+
+  tabGroup.addTab(tab1);
+  tabGroup.addTab(tab2);
+  tabGroup.addTab(tab3);
+
+  tabGroup.setActiveTab(0);
+  tabGroup.open();
+
 }); 
 
 Titanium.UI.currentWindow.add(btnlogin);
