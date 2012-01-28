@@ -4,7 +4,7 @@ var lblWelcome = Ti.UI.createLabel({
   text:"Welcome to TextPawn",
   top: 12,
   width: "80%",
-  height: 30,
+  height: 20,
   left: "10%",
   color: '#fff',
   textAlign: 'center',
@@ -107,8 +107,7 @@ btnlogin.addEventListener('click',function(e)
 
 Ti.App.addEventListener('gotoOverview', function(event)  
 {   
-    var win = Titanium.UI.createWindow({url:'overview.js',
-    name:event.name});
+    var win = Titanium.UI.createWindow({url:'overview.js', name:event.name});
     win.title="Welcome, "+event.name;
     win.id=event.id;
     win.open();

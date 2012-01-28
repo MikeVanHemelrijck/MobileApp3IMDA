@@ -27,7 +27,7 @@ var table = Ti.UI.createTableView({
 
 table.addEventListener("click", function(e) {
 	
-var tabGroupMain = Titanium.UI.createTabGroup({id:'tabGroupMain'});
+var tabGroup = Titanium.UI.createTabGroup({id:'tabGroupMain'});
 
   var winDetail = Titanium.UI.createWindow({  
     url:'detail.js',
