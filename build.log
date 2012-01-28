@@ -8,12 +8,17 @@ Logfile initialized
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 15 seconds)
-[DEBUG] waited 16.343000 seconds on emulator to get ready
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 30 seconds)
+[DEBUG] waited 32.353000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.yourcompanyname.mobileapp installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying project resources..
+[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\additem.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\additem.js
+[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\detail.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\detail.js
 [TRACE] COPYING MODIFIED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\overview.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\overview.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
@@ -21,5 +26,4 @@ Logfile initialized
 [INFO] Re-launching application ... MobileApp
 [INFO] Launching application ... MobileApp
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.yourcompanyname.mobileapp/.MobileappActivity }
-Warning: Activity not started, its current task has been brought to the front
 

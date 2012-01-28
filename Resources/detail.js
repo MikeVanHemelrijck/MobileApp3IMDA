@@ -34,24 +34,20 @@ table.addEventListener("click", function(e) {
 	
 var tabGroup = Titanium.UI.createTabGroup({id:'tabGroup1'});
 
-  var winDetail = Titanium.UI.createWindow({  
-    url:'detail.js',
-    backgroundColor:'000'
-  });
-  var winAdditem = Titanium.UI.createWindow({  
-    url:'additem.js',
+  var winRegister = Titanium.UI.createWindow({  
+    url:'register.js',
     backgroundColor:'000'
   });
 
   var tab1 = Titanium.UI.createTab({
 	id:'tab1',
-	title:'Detail',
-	window:winDetail
+	title:'Register',
+	window:winRegister
   });
   var tab2 = Titanium.UI.createTab({
 	id:'tab2',
-	title:'Add item',
-	window:winAdditem
+	title:'Register',
+	window:winRegister
   });
 
   tabGroup.addTab(tab1);
