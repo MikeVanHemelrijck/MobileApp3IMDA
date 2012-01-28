@@ -5,6 +5,7 @@ Titanium.UI.currentWindow.setBackgroundColor('#000');
  * ======================================= */
 
 var id = Titanium.UI.currentWindow.id;
+var name = Titanium.UI.currentWindow.name;
 
 /* ============================
  * Content of the window
@@ -18,11 +19,12 @@ var label1 = Ti.UI.createLabel({
   left: "10%",
   color: '#fff',
   textAlign: 'center',
+  font:{fontSize:26,fontWeight:'bold'}
 });
 
 
 var table = Ti.UI.createTableView({
-  top: 80,
+  top: 60
 });
 
 table.addEventListener("click", function(e) {
@@ -40,7 +42,8 @@ var tabGroup = Titanium.UI.createTabGroup({id:'tabGroupMain'});
   });
   var winAdditem = Titanium.UI.createWindow({  
     url:'additem.js',
-    backgroundColor:'000'
+    backgroundColor:'000',
+    name: name
   });
 
   var tab1 = Titanium.UI.createTab({
@@ -62,25 +65,6 @@ var tabGroup = Titanium.UI.createTabGroup({id:'tabGroupMain'});
 
 });
 
-
-var btnloguit = Ti.UI.createButton({
-  title:"log uit",
-  top: 20,
-  width: 100,
-  height: 32,
-  left: 3,
-});
-
-btnloguit.addEventListener('click', function(e){
-  var winLogin = Titanium.UI.createWindow({  
-    backgroundColor:'000',
-    url:'login.js'
-  });
-  winLogin.open();
-});
-
-var name = Titanium.UI.currentWindow.name;
-
 var overviewReq = Titanium.Network.createHTTPClient();  
 overviewReq.open('GET','http://www.vhdesign.be/School/Mobiel/overview.php?username=' + name); 
 overviewReq.send();
@@ -97,7 +81,7 @@ overviewReq.onload = function()
 		{
 				var row = Titanium.UI.createTableViewRow({
 					className: 'table1Class',
-					title: response.subject[i],
+					title: 'From: ' + response.message_from[i] + "  -  " + response.subject[i],
 					id: response.id[i],
 					message: response.message[i],
 					subject: response.subject[i],
@@ -122,5 +106,4 @@ overviewReq.onerror = function()
 
 Titanium.UI.currentWindow.add(label1);
 Titanium.UI.currentWindow.add(table);
-Titanium.UI.currentWindow.add(btnloguit);
 

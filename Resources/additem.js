@@ -5,32 +5,11 @@ win.setBackgroundColor('#000');
  * Elements on the window
  * ====================== */
 
-var lblFrom = Ti.UI.createLabel({
-  text:'From',
-  top: 10,
-  width: "30%",
-  height: 40, 
-  left: 5,
-  font:{fontSize:11},
-  color: '#fff',
-  textAlign: 'left'
-});
-
-var txtFrom= Ti.UI.createTextField({
-  top: 10,
-  left: 100,
-  width: "60%",
-  font:{fontSize:11},
-  height: 40,
-  color: '#000',
-  textAlign: 'left'
-});
-
 var lblTo = Ti.UI.createLabel({
-  text:'To',
-  top: 70,
+  text:'To:',
+  top: 20,
   width: "30%",
-  height: 40, 
+  height: 20, 
   left: 5,
   font:{fontSize:11},
   color: '#fff',
@@ -38,19 +17,19 @@ var lblTo = Ti.UI.createLabel({
 });
 
 var txtTo= Ti.UI.createTextField({
-  top: 70,
-  left: 100,
-  width: "60%",
+  top: 45,
+  left: 5,
+  width: "90%",
   font:{fontSize:11},
   height: 40,
   color: '#000',
   textAlign: 'left'
 });
 var lblSubject = Ti.UI.createLabel({
-  text:'Subject',
-  top: 130,
+  text:'Subject:',
+  top: 90,
   width: "30%",
-  height: 40, 
+  height: 20, 
   left: 5,
   font:{fontSize:11},
   color: '#fff',
@@ -58,9 +37,9 @@ var lblSubject = Ti.UI.createLabel({
 });
 
 var txtSubject= Ti.UI.createTextField({
-  top: 130,
-  left: 100,
-  width: "60%",
+  top: 115,
+  left: 5,
+  width: "90%",
   font:{fontSize:11},
   height: 40,
   color: '#000',
@@ -69,9 +48,9 @@ var txtSubject= Ti.UI.createTextField({
 
 var lblMessage = Ti.UI.createLabel({
   text:'Message:',
-  top: 190,
+  top: 160,
   width: "30%",
-  height: 40,
+  height: 20,
   left: 5,
   font:{fontSize:11},
   color: '#fff',
@@ -79,21 +58,21 @@ var lblMessage = Ti.UI.createLabel({
 });
 
 var txtMessage= Ti.UI.createTextArea({
-  top: 190,
-  left: 100,
-  width: "60%",
-  height: 60,
+  top: 185,
+  left: 5,
+  width: "90%",
+  height: 120,
   font:{fontSize:11},
   color: '#000',
   textAlign: 'left'
 });
 
 var btnAdd = Ti.UI.createButton({
-  title:"Add",
-  bottom: 5,
-  width: 50,
+  title:"Send",
+  top: 315,
+  width: 80,
   height: 32,
-  right: 3
+  left: 5,
 });
 
 
@@ -110,7 +89,7 @@ var addTaskMessage;
 // event listener to button
 btnAdd.addEventListener('click', function(e){
 	
-	addFrom=txtFrom.value;
+	addFrom=Titanium.UI.currentWindow.name;
 	addTo=txtTo.value;
 	addSubject=txtSubject.value;
 	addMessage=txtMessage.value;
@@ -132,8 +111,6 @@ btnAdd.addEventListener('click', function(e){
 	
 });
 
-Titanium.UI.currentWindow.add(lblFrom);
-Titanium.UI.currentWindow.add(txtFrom);
 Titanium.UI.currentWindow.add(lblTo);
 Titanium.UI.currentWindow.add(txtTo);
 Titanium.UI.currentWindow.add(lblSubject);

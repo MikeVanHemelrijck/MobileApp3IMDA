@@ -11,21 +11,12 @@ Logfile initialized
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 50 seconds)
-[DEBUG] waited 50.385000 seconds on emulator to get ready
+[DEBUG] Device connected... (waited 30 seconds)
+[DEBUG] waited 30.277000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.yourcompanyname.mobileapp installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\app.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\app.js
-[TRACE] COPYING MODIFIED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\detail.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\detail.js
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\images\loading.jpg => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\images\loading.jpg
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\images\logo.jpg => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\images\logo.jpg
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\images\splash.jpg => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\images\splash.jpg
 [TRACE] COPYING MODIFIED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\login.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\login.js
 [TRACE] COPYING MODIFIED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\overview.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\overview.js
 [INFO] Tiapp.xml unchanged, skipping class generation

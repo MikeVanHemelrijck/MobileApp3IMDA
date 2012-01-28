@@ -1,15 +1,15 @@
 Titanium.UI.currentWindow.setBackgroundColor('#000');
 
 var logo = Titanium.UI.createImageView({
-	url: 'http://i39.tinypic.com/5468ih.jpg',
-	width: 320,
-	height: 275,
-	top: 20
+	url: 'http://www.vhdesign.be/School/Mobiel/splash.jpg',
+	width: 235,
+	height: 200,
+	top: 5,
 })
 
 var labelusername = Ti.UI.createLabel({
   text:"Username:",
-  top: 360,
+  top: 260,
   left: 20,
   width: "30%",
   height: 25,
@@ -18,8 +18,8 @@ var labelusername = Ti.UI.createLabel({
 
 var txtUsername = Ti.UI.createTextField({
   height:45,
-  top: 350,
-  left: 110,
+  top: 250,
+  right: 10,
   width: "60%",
   color: '#000',
   textAlign: 'left',
@@ -32,7 +32,7 @@ var txtUsername = Ti.UI.createTextField({
 
 var labelpassword = Ti.UI.createLabel({
   text:"Password:",
-  top: 410,
+  top: 310,
   left: 20,
   width: "30%",
   height: 25,
@@ -41,8 +41,8 @@ var labelpassword = Ti.UI.createLabel({
 
 var txtPassword = Ti.UI.createTextField({
 	height:45,
-	top : 400,
-	left : 110,
+	top : 300,
+	right: 10,
 	width : '60%',
 	hintText : 'password',
 	color: '#000',
@@ -55,19 +55,19 @@ var txtPassword = Ti.UI.createTextField({
 });
 
 var btnlogin = Ti.UI.createButton({
-  title:"login",
-  top: 470,
+  title:"Login",
+  top: 360,
   width: "30%",
   height: 40,
-  left: 20,
+  right: 10,
   font:{fontFamily:'Arial',fontWeight:'bold',fontSize:14}  
 })
 var btnregister = Ti.UI.createButton({
   title:"Register",
-  top: 470,
+  top: 360,
   width: "30%",
   height: 40,
-  left: 130,
+  right: 110,
   font:{fontFamily:'Arial',fontWeight:'bold',fontSize:14}  
 })
 
@@ -79,7 +79,6 @@ loginReq.onload = function()
     var response = JSON.parse(json);  
     if (response.status == true)  
     {  
-        alert("Welcome " + response.name + ", your id is:" +response.id);
         txtUsername.blur();  
         txtPassword.blur();  
         Ti.App.fireEvent('gotoOverview', {  
@@ -113,15 +112,15 @@ btnlogin.addEventListener('click',function(e)
 Ti.App.addEventListener('gotoOverview', function(event)  
 {   
     var win = Titanium.UI.createWindow({url:'overview.js', name:event.name});
-    win.title="Welcome, "+event.name;
+    win.title=event.name + "'s Inbox";
     win.id=event.id;
     win.open();
 }); 
 
 Titanium.UI.currentWindow.add(btnlogin);
 Titanium.UI.currentWindow.add(btnregister);
-Titanium.UI.currentWindow.add(txtPassword);
 Titanium.UI.currentWindow.add(txtUsername);
+Titanium.UI.currentWindow.add(txtPassword);
 Titanium.UI.currentWindow.add(labelpassword);
 Titanium.UI.currentWindow.add(labelusername);
 Titanium.UI.currentWindow.add(logo);
