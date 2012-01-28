@@ -1,117 +1,75 @@
 Titanium.UI.currentWindow.setBackgroundColor('#000');
 
 /* =======================================
- * Data from overview.js as currentWindow
+ * Data from project.js as currentWindow
  * ======================================= */
 
-var id = Titanium.UI.currentWindow.id;
+var from = Titanium.UI.currentWindow.from;
+var to = Titanium.UI.currentWindow.to;
+var message = Titanium.UI.currentWindow.message;
+var subject = Titanium.UI.currentWindow.subject;
+var date = Titanium.UI.currentWindow.date;
 
-/* ============================
- * Content of the window
- * ============================ */
+Titanium.UI.currentWindow.title=subject;
 
-var label1 = Ti.UI.createLabel({
-  text:"Projects overview",
+/* =======================================
+ * window elements
+ * ======================================= */
+
+var lblTo = Ti.UI.createLabel({
+  text:"To: "+to,
   top: 20,
-  width: "80%",
-  height: 32,
-  left: "10%",
+  height: 20,
+  left: 5,
+  width: "70%",
+  font:{fontSize:14,fontWeight:'bold'},
   color: '#fff',
-  textAlign: 'center',
-});
+  textAlign: 'left',
+})
 
+var lblFrom = Ti.UI.createLabel({
+  text:'From: ' + from,
+  top: 60,
+  width: "80%",
+  height: 20,
+  left: 5,
+  font:{fontSize:12,fontWeight:'bold'},
+  color: '#fff',
+  textAlign: 'left',
+})
 
-var table = Ti.UI.createTableView({
-  top: 80,
-});
+var lblDate = Ti.UI.createLabel({
+  text: "Date: "+ date,
+  top: 85,
+  width: "80%",
+  height: 20,
+  left: 5,
+  fontSize:11,
+  color: '#fff',
+  textAlign: 'left',
+})
 
+var lblSubject = Ti.UI.createLabel({
+  text: "Subject: "+subject,
+  top: 120,
+  width: "80%",
+  left: 5,
+  fontSize:11,
+  color: '#fff',
+  textAlign: 'left',
+})
+var lblMessage = Ti.UI.createLabel({
+  text: "Message: "+message,
+  top: 160,
+  width: "80%",
+  left: 5,
+  fontSize:11,
+  color: '#fff',
+  textAlign: 'left',
+})
 
-/* ============================
- * Tabs and functionality 
- * ============================ */
-
-table.addEventListener("click", function(e) {
-	
-var tabGroup = Titanium.UI.createTabGroup({id:'tabGroup1'});
-
-  var winRegister = Titanium.UI.createWindow({  
-    url:'register.js',
-    backgroundColor:'000'
-  });
-
-  var tab1 = Titanium.UI.createTab({
-	id:'tab1',
-	title:'Register',
-	window:winRegister
-  });
-  var tab2 = Titanium.UI.createTab({
-	id:'tab2',
-	title:'Register',
-	window:winRegister
-  });
-
-  tabGroup.addTab(tab1);
-  tabGroup.addTab(tab2);
-
-  tabGroup.setActiveTab(0);
-  tabGroup.open();
-
-});
-
-
-var btnloguit = Ti.UI.createButton({
-  title:"log uit",
-  top: 20,
-  width: 50,
-  height: 32,
-  left: 3,
-});
-
-btnloguit.addEventListener('click', function(e){
-  var winLogin = Titanium.UI.createWindow({  
-    backgroundColor:'000',
-    url:'login.js'
-  });
-  winLogin.open();
-});
-
-var overviewReq = Titanium.Network.createHTTPClient();  
-overviewReq.open('GET','http://www.vhdesign.be/School/Mobiel/overview.php'); 
-overviewReq.send();
-
-overviewReq.onload = function()  
-{  
-    var json = this.responseText; 
-    var response = JSON.parse(json); 
-    if (response.status == "true")  
-    {  
-    	var rows = [];
-		
-		for(var i = 1; i < (response.length + 1); i++)
-		{
-				var row = Titanium.UI.createTableViewRow({
-					className: 'table1Class',
-					title: response.title[i],
-					id: response.id[i],
-					description: response.description[i],
-					picture: response.picture[i]
-				});
-				rows.push(row);
-		}
-		table.setData(rows);
-    }  
-    else  
-    {  
-        alert("response.content");  
-    }
-};
-
-overviewReq.onerror = function()  
-{ 
-	alert("Could not connect to server."); 
-};
-
-Titanium.UI.currentWindow.add(label1);
-Titanium.UI.currentWindow.add(table);
-Titanium.UI.currentWindow.add(btnloguit);
-
+Titanium.UI.currentWindow.add(lblTo);
+Titanium.UI.currentWindow.add(lblFrom);
+Titanium.UI.currentWindow.add(lblDate);
+Titanium.UI.currentWindow.add(lblSubject);
+Titanium.UI.currentWindow.add(lblMessage);

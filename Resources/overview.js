@@ -11,7 +11,7 @@ var id = Titanium.UI.currentWindow.id;
  * ============================ */
 
 var label1 = Ti.UI.createLabel({
-  text:"Projects overview",
+  text:"Inbox",
   top: 20,
   width: "80%",
   height: 32,
@@ -25,18 +25,18 @@ var table = Ti.UI.createTableView({
   top: 80,
 });
 
-
-/* ============================
- * Tabs and functionality 
- * ============================ */
-
 table.addEventListener("click", function(e) {
 	
-var tabGroup = Titanium.UI.createTabGroup({id:'tabGroup1'});
+var tabGroupMain = Titanium.UI.createTabGroup({id:'tabGroupMain'});
 
   var winDetail = Titanium.UI.createWindow({  
     url:'detail.js',
-    backgroundColor:'000'
+    backgroundColor:'000',
+    from: e.rowData.from,
+    to: e.rowData.to,
+    subject: e.rowData.subject,
+    message: e.rowData.message,
+    date: e.rowData.date
   });
   var winAdditem = Titanium.UI.createWindow({  
     url:'additem.js',
@@ -66,7 +66,7 @@ var tabGroup = Titanium.UI.createTabGroup({id:'tabGroup1'});
 var btnloguit = Ti.UI.createButton({
   title:"log uit",
   top: 20,
-  width: 50,
+  width: 100,
   height: 32,
   left: 3,
 });
@@ -79,8 +79,10 @@ btnloguit.addEventListener('click', function(e){
   winLogin.open();
 });
 
+var name = Titanium.UI.currentWindow.name;
+
 var overviewReq = Titanium.Network.createHTTPClient();  
-overviewReq.open('GET','http://www.vhdesign.be/School/Mobiel/overview.php'); 
+overviewReq.open('GET','http://www.vhdesign.be/School/Mobiel/overview.php?username=' + name); 
 overviewReq.send();
 
 overviewReq.onload = function()  
@@ -95,10 +97,13 @@ overviewReq.onload = function()
 		{
 				var row = Titanium.UI.createTableViewRow({
 					className: 'table1Class',
-					title: response.title[i],
+					title: response.subject[i],
 					id: response.id[i],
-					description: response.description[i],
-					picture: response.picture[i]
+					message: response.message[i],
+					subject: response.subject[i],
+					date: response.date[i],
+					from: response.message_from[i],
+					to: response.message_to[i]
 				});
 				rows.push(row);
 		}

@@ -5,8 +5,8 @@ win.setBackgroundColor('#000');
  * Elements on the window
  * ====================== */
 
-var lblName = Ti.UI.createLabel({
-  text:'Name:',
+var lblFrom = Ti.UI.createLabel({
+  text:'From',
   top: 10,
   width: "30%",
   height: 40, 
@@ -16,7 +16,7 @@ var lblName = Ti.UI.createLabel({
   textAlign: 'left'
 });
 
-var txtName= Ti.UI.createTextField({
+var txtFrom= Ti.UI.createTextField({
   top: 10,
   left: 100,
   width: "60%",
@@ -26,9 +26,50 @@ var txtName= Ti.UI.createTextField({
   textAlign: 'left'
 });
 
-var lblDescription = Ti.UI.createLabel({
-  text:'Description:',
-  top: 50,
+var lblTo = Ti.UI.createLabel({
+  text:'To',
+  top: 70,
+  width: "30%",
+  height: 40, 
+  left: 5,
+  font:{fontSize:11},
+  color: '#fff',
+  textAlign: 'left'
+});
+
+var txtTo= Ti.UI.createTextField({
+  top: 70,
+  left: 100,
+  width: "60%",
+  font:{fontSize:11},
+  height: 40,
+  color: '#000',
+  textAlign: 'left'
+});
+var lblSubject = Ti.UI.createLabel({
+  text:'Subject',
+  top: 130,
+  width: "30%",
+  height: 40, 
+  left: 5,
+  font:{fontSize:11},
+  color: '#fff',
+  textAlign: 'left'
+});
+
+var txtSubject= Ti.UI.createTextField({
+  top: 130,
+  left: 100,
+  width: "60%",
+  font:{fontSize:11},
+  height: 40,
+  color: '#000',
+  textAlign: 'left'
+});
+
+var lblMessage = Ti.UI.createLabel({
+  text:'Message:',
+  top: 190,
   width: "30%",
   height: 40,
   left: 5,
@@ -37,8 +78,8 @@ var lblDescription = Ti.UI.createLabel({
   textAlign: 'left'
 });
 
-var txtDescription= Ti.UI.createTextArea({
-  top: 50,
+var txtMessage= Ti.UI.createTextArea({
+  top: 190,
   left: 100,
   width: "60%",
   height: 60,
@@ -61,16 +102,18 @@ var btnAdd = Ti.UI.createButton({
  * =================== */
 
 // event listeners pickers
-var addTaskName;
-var addPicture;
-var addTaskContent;
+var addFrom;
+var addTo;
+var addSubject;
+var addTaskMessage;
 
 // event listener to button
 btnAdd.addEventListener('click', function(e){
 	
-	addName=txtName.value;
-	addDescription=txtDescription.value;
-	addPicture = "test";
+	addFrom=txtFrom.value;
+	addTo=txtTo.value;
+	addSubject=txtSubject.value;
+	addMessage=txtMessage.value;
 	
 //alert("http://esselenstanja2011.dreamhosters.com/mobiele/addTask.php?projectId="+projectId+"&taskName="+addTaskName+"&taskDeadline="+addTaskDeadlineYear+"-"+addTaskDeadlineMonth+"-"+addTaskDeadlineDay+"&personId="+addTaskPersonId+"&taskContent="+addTaskContent+"&taskImportant="+addTaskImportant); 
 	
@@ -79,31 +122,8 @@ btnAdd.addEventListener('click', function(e){
 	 * ============================*/
 	
 	var overviewReq = Titanium.Network.createHTTPClient();  
-	overviewReq.open('GET','http://www.vhdesign.be/School/Mobiel/additem.php?name='+addName+'&description='+addDescription+'&picture='+addPicture); 
+	overviewReq.open('GET','http://www.vhdesign.be/School/Mobiel/additem.php?From='+addFrom+'&To='+addTo+'&Subject='+addSubject+'&Message='+addMessage); 
 	overviewReq.send();
-	
-	overviewReq.onload = function()  
-	{  
-	    var json = this.responseText;  
-    	var response = JSON.parse(json);  
-    	if (response.status == "true")  
-	    {  
-	    	alert("Task was saved.");    	
-	    }  
-	    else  
-	    {  
-	        alert("Task was not saved.");  
-	    }
-
-	    /* if (response.status == "true")  
-	    {  
-	    	alert("Task was saved.");    	
-	    }  
-	    else if (response.status == "false") 
-	    {  
-	        alert("Task was not saved.");  
-	    }*/
-	};
 	
 	overviewReq.onerror = function()  
 	{ 
@@ -112,8 +132,12 @@ btnAdd.addEventListener('click', function(e){
 	
 });
 
-Titanium.UI.currentWindow.add(lblName);
-Titanium.UI.currentWindow.add(txtName);
-Titanium.UI.currentWindow.add(lblDescription);
-Titanium.UI.currentWindow.add(txtDescription);
+Titanium.UI.currentWindow.add(lblFrom);
+Titanium.UI.currentWindow.add(txtFrom);
+Titanium.UI.currentWindow.add(lblTo);
+Titanium.UI.currentWindow.add(txtTo);
+Titanium.UI.currentWindow.add(lblSubject);
+Titanium.UI.currentWindow.add(txtSubject);
+Titanium.UI.currentWindow.add(lblMessage);
+Titanium.UI.currentWindow.add(txtMessage);
 Titanium.UI.currentWindow.add(btnAdd);

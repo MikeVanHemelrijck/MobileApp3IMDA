@@ -1,10 +1,10 @@
 Titanium.UI.currentWindow.setBackgroundColor('#000');
 
 var lblWelcome = Ti.UI.createLabel({
-  text:"Welcome to TeamTaskManager, fill in these fields to login!",
+  text:"Welcome to TextPawn",
   top: 12,
   width: "80%",
-  height: 40,
+  height: 30,
   left: "10%",
   color: '#fff',
   textAlign: 'center',
@@ -72,7 +72,7 @@ loginReq.onload = function()
 {  
     var json = this.responseText;  
     var response = JSON.parse(json);  
-    if (response.status == "true")  
+    if (response.status == true)  
     {  
         alert("Welcome " + response.name + ", your id is:" +response.id);
         txtUsername.blur();  
@@ -82,7 +82,7 @@ loginReq.onload = function()
             id:response.id 
         });
     }  
-    else if (response.status == "false")
+    else if (response.status == false)  
     {  
     	alert("mislukt");
        // alert(response.message);  
@@ -107,7 +107,8 @@ btnlogin.addEventListener('click',function(e)
 
 Ti.App.addEventListener('gotoOverview', function(event)  
 {   
-    var win = Titanium.UI.createWindow({url:'overview.js'});
+    var win = Titanium.UI.createWindow({url:'overview.js',
+    name:event.name});
     win.title="Welcome, "+event.name;
     win.id=event.id;
     win.open();
