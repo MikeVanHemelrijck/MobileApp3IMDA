@@ -64,39 +64,42 @@ var lblMessage = Ti.UI.createLabel({
   textAlign: 'left',
 })
 
-
+// HIER BEGINT NIEUW STUK
+// _________________________________________________________________________________________________
 // Laatste message opvragen
 var lastmsgReq = Titanium.Network.createHTTPClient();  
 lastmsgReq.open('GET','http://www.vhdesign.be/School/Mobiel/getlastmsg.php?to='+ to +'&from' + from); 
 lastmsgReq.send();
 
 // Lijst opvullen
-lastmsgReq.onload = function()  
-{  
-    var json = this.responseText; 
-    var response = JSON.parse(json); 
-					Lastmessage: response.message,
-					Lastsubject: response.subject
-};
+// lastmsgReq.onload = function()  
+// {  
+//     var json = this.responseText; 
+//     var response = JSON.parse(json); 
+// 		 lastmessage = response.message;
+//       	 lastsubject = response.subject;
+// };
 
-var lblLastSubject = Ti.UI.createLabel({
-  text: Lastsubject,
-  top: 130,
-  width: "85%",
-  left: 15,
-  fontSize:11,
-  color: '#fff',
-  textAlign: 'left',
-})
-var lblLastMessage = Ti.UI.createLabel({
-  text: Lastmessage,
-  top: 150,
-  width: "85%",
-  left: 15,
-  fontSize:11,
-  color: '#fff',
-  textAlign: 'left',
-})
+// var lblLastSubject = Ti.UI.createLabel({
+//   text: lastsubject,
+//   top: 130,
+//  width: "85%",
+//  left: 15,
+//   fontSize:11,
+//   color: '#fff',
+//   textAlign: 'left',
+// })
+// var lblLastMessage = Ti.UI.createLabel({
+// text: lastmessage,
+//   top: 150,
+//   width: "85%",
+//   left: 15,
+//   fontSize:11,
+//   color: '#fff',
+//   textAlign: 'left',
+// })
+// TOT HIER
+//_____________________________________________________________________________________________________
 
 var btnBack = Ti.UI.createButton({
   title:"Back to Inbox",
@@ -116,8 +119,8 @@ btnBack.addEventListener('click', function(e){
   winInbox.open();
 });
 
-Titanium.UI.currentWindow.add(lblLastSubject);
-Titanium.UI.currentWindow.add(lblLastMessage);
+// Titanium.UI.currentWindow.add(lblLastSubject);
+// Titanium.UI.currentWindow.add(lblLastMessage);
 Titanium.UI.currentWindow.add(lblFrom);
 Titanium.UI.currentWindow.add(lblDate);
 Titanium.UI.currentWindow.add(lblSubject);
