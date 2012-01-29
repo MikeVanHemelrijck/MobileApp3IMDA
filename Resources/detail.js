@@ -67,9 +67,9 @@ var lblMessage = Ti.UI.createLabel({
 // HIER BEGINT NIEUW STUK
 // _________________________________________________________________________________________________
 // Laatste message opvragen
-var lastmsgReq = Titanium.Network.createHTTPClient();  
-lastmsgReq.open('GET','http://www.vhdesign.be/School/Mobiel/getlastmsg.php?to='+ to +'&from' + from); 
-lastmsgReq.send();
+// var lastmsgReq = Titanium.Network.createHTTPClient();  
+// lastmsgReq.open('GET','http://www.vhdesign.be/School/Mobiel/getlastmsg.php?to='+ to +'&from' + from); 
+// lastmsgReq.send();
 
 // Lijst opvullen
 // lastmsgReq.onload = function()  
