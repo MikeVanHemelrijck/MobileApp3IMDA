@@ -69,12 +69,14 @@ var btnregister = Ti.UI.createButton({
   left: 15, 
 })
 
+// Login-gegevens checken
 var loginReq = Titanium.Network.createHTTPClient();  
 
 loginReq.onload = function()  
 {  
     var json = this.responseText;  
-    var response = JSON.parse(json);  
+    var response = JSON.parse(json); 
+    // Naar overview gaan als het correct is 
     if (response.status == true)  
     {  
         txtUsername.blur();  
@@ -86,8 +88,8 @@ loginReq.onload = function()
     }  
     else if (response.status == false)  
     {  
-    	alert("mislukt");
-       // alert(response.message);  
+    // Werkt niet, probleem met json, kan response.status niet lezen
+    	alert("Wrong username/password combination!");
     }  
 };
 loginReq.onerror = function()  
@@ -97,7 +99,8 @@ loginReq.onerror = function()
 btnlogin.addEventListener('click',function(e)  
 {  
     if (txtUsername.value != '' && txtPassword.value != '')  
-    {         
+    {      
+    // Eerst checken op lege velden en vervolgens request doorsturen naar php-file   
        loginReq.open('GET','http://www.vhdesign.be/School/Mobiel/login.php?username='+txtUsername.value+'&password='+txtPassword.value); 
        loginReq.send();
     }  
@@ -109,6 +112,7 @@ btnlogin.addEventListener('click',function(e)
 
 btnregister.addEventListener('click',function(e)  
 { 
+// Registreerscherm openen
 	var winReg = Titanium.UI.createWindow({  
     backgroundColor:'#000',
     url:'register.js',
@@ -116,9 +120,9 @@ btnregister.addEventListener('click',function(e)
   winReg.open();
 });
 
+// Tabgroup aanmaken die blijft staan op elke pagina
 Ti.App.addEventListener('gotoOverview', function(event)  
 {   
-  
   var tabGroup = Titanium.UI.createTabGroup({id:'tabGroupMain'});
 
   var winInbox = Titanium.UI.createWindow({  
@@ -159,7 +163,6 @@ Ti.App.addEventListener('gotoOverview', function(event)
 
   tabGroup.setActiveTab(0);
   tabGroup.open();
-
 }); 
 
 Titanium.UI.currentWindow.add(btnlogin);

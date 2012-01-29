@@ -76,39 +76,44 @@ var btnAdd = Ti.UI.createButton({
 });
 
 
-/* ===================
- * save and sens
- * =================== */
+// Vars aanmaken voor velden te checken
 
-// event listeners pickers
 var addFrom;
 var addTo;
 var addSubject;
 var addTaskMessage;
 
-// event listener to button
+// Checken of velden al dan niet leeg zijn
+
 btnAdd.addEventListener('click', function(e){
-	
+	if(txtTo.value=="" || txtSubject.value=="" ||txtMessage.value=="")
+{
+alert("Please fill in all fields before submitting.");
+} else {
+// Velden opvullen met ingevulde content
 	addFrom=Titanium.UI.currentWindow.name;
 	addTo=txtTo.value;
 	addSubject=txtSubject.value;
 	addMessage=txtMessage.value;
 	
-//alert("http://esselenstanja2011.dreamhosters.com/mobiele/addTask.php?projectId="+projectId+"&taskName="+addTaskName+"&taskDeadline="+addTaskDeadlineYear+"-"+addTaskDeadlineMonth+"-"+addTaskDeadlineDay+"&personId="+addTaskPersonId+"&taskContent="+addTaskContent+"&taskImportant="+addTaskImportant); 
-	
-	/* ============================
-	 * Call to save task
-	 * ============================*/
-	
+	// Request maken + verzenden naar php-file
 	var overviewReq = Titanium.Network.createHTTPClient();  
 	overviewReq.open('GET','http://www.vhdesign.be/School/Mobiel/additem.php?From='+addFrom+'&To='+addTo+'&Subject='+addSubject+'&Message='+addMessage); 
 	overviewReq.send();
 	
+	overviewReq.onload = function()  
+{  
+    alert("Succesfully sent!");
+    txtSubject.value="";
+    txtMessage.value="";
+    txtTo.value="";
+};
+
 	overviewReq.onerror = function()  
 	{ 
 		alert("Could not connect to server."); 
 	};
-	
+}
 });
 
 Titanium.UI.currentWindow.add(lblTo);

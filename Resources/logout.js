@@ -29,6 +29,7 @@ var btnBack = Ti.UI.createButton({
   left: 15,
 });
 
+// App afsluiten bij logout
 btnBack.addEventListener('click', function(e){
   Titanium.UI.currentWindow.close();
 });

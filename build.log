@@ -1,138 +1,21 @@
 Logfile initialized
-[INFO] logfile = C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build.log
-[DEBUG] C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\builder.py simulator MobileApp C:\Program Files\Android\android-sdk C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp com.yourcompanyname.mobileapp 7 HVGA
+[INFO] logfile = C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\build.log
+[DEBUG] C:\Users\Bram\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\builder.py simulator MobileApp C:\Program Files (x86)\Android\android-sdk-windows C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA com.yourcompanyname.mobileapp 7 HVGA
 [INFO] Building MobileApp for Android ... one moment
 [INFO] Titanium SDK version: 1.7.3 (10/17/11 13:44 dcf4257)
 [DEBUG] Waiting for device to be ready ...
-[TRACE] adb devices returned 0 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 60 seconds)
-[DEBUG] waited 60.535000 seconds on emulator to get ready
-[INFO] Waiting for the Android Emulator to become available
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.028000 seconds on emulator to get ready
 [DEBUG] com.yourcompanyname.mobileapp installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying project resources..
-[INFO] Detected tiapp.xml change (or assets deleted), forcing full re-build...
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\additem.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\additem.js
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\appicon.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\appicon.png
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\default.png
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\app.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\app.js
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\detail.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\detail.js
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\images\loading.jpg => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\images\loading.jpg
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\images\logo.jpg => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\images\logo.jpg
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\images\splash.jpg => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\images\splash.jpg
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\KS_nav_ui.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\KS_nav_ui.png
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\KS_nav_views.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\KS_nav_views.png
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\login.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\login.js
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\logout.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\logout.js
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\overview.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\overview.js
-[TRACE] COPYING CREATED FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\register.js => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\register.js
-[TRACE] Generating Java Classes
+[TRACE] COPYING MODIFIED FILE: C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\Resources\detail.js => C:\Users\Bram\My Documents\Titanium Studio Workspace\MobileApp3IMDA\build\android\bin\assets\Resources\detail.js
+[INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-long-land-hdpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-long-land-hdpi\default_d44e27d97b.png
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-long-land-ldpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-long-land-ldpi\default_d44e27d97b.png
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-long-port-hdpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-long-port-hdpi\default_d44e27d97b.png
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-long-port-ldpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-long-port-ldpi\default_d44e27d97b.png
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-notlong-land-hdpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-notlong-land-hdpi\default_d44e27d97b.png
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-notlong-land-ldpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-notlong-land-ldpi\default_d44e27d97b.png
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-notlong-land-mdpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-notlong-land-mdpi\default_d44e27d97b.png
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-notlong-port-hdpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-notlong-port-hdpi\default_d44e27d97b.png
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-notlong-port-ldpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-notlong-port-ldpi\default_d44e27d97b.png
-[TRACE] COPYING FILE: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\Resources\android\images\res-notlong-port-mdpi\default.png => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\res\drawable-notlong-port-mdpi\default_d44e27d97b.png
-[DEBUG] app stylesheet => C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\gen\com\yourcompanyname\mobileapp\ApplicationStylesheet.java
-[DEBUG] copying app icon: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\appicon.png
-[DEBUG] generating theme.xml
-[DEBUG] found splash screen at C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\assets\Resources\default.png
-[TRACE] Writing out AndroidManifest.xml
-[DEBUG] adding C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\gen\com\yourcompanyname\mobileapp\ApplicationStylesheet.java to javac build list
-[DEBUG] adding C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\gen\com\yourcompanyname\mobileapp\MobileappActivity.java to javac build list
-[DEBUG] adding C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\gen\com\yourcompanyname\mobileapp\MobileappAppInfo.java to javac build list
-[DEBUG] adding C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\gen\com\yourcompanyname\mobileapp\MobileappApplication.java to javac build list
-[DEBUG] adding C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\gen\com\yourcompanyname\mobileapp\R.java to javac build list
-[DEBUG] Building Java Sources: "C:\\Users\\Mike\\Documents\\@KHM\\3IMDA\\Mobile\\MobileApp\\build\\android\\gen\\com\\yourcompanyname\\mobileapp\\ApplicationStylesheet.java" "C:\\Users\\Mike\\Documents\\@KHM\\3IMDA\\Mobile\\MobileApp\\build\\android\\gen\\com\\yourcompanyname\\mobileapp\\MobileappActivity.java" "C:\\Users\\Mike\\Documents\\@KHM\\3IMDA\\Mobile\\MobileApp\\build\\android\\gen\\com\\yourcompanyname\\mobileapp\\MobileappAppInfo.java" "C:\\Users\\Mike\\Documents\\@KHM\\3IMDA\\Mobile\\MobileApp\\build\\android\\gen\\com\\yourcompanyname\\mobileapp\\MobileappApplication.java" "C:\\Users\\Mike\\Documents\\@KHM\\3IMDA\\Mobile\\MobileApp\\build\\android\\gen\\com\\yourcompanyname\\mobileapp\\R.java"
 [INFO] Waiting for SDCard to become available..
-[INFO] Compiling Android Resources... This could take some time
-[DEBUG] Android classes.dex built
-[DEBUG] creating unsigned apk: C:\Users\Mike\Documents\@KHM\3IMDA\Mobile\MobileApp\build\android\bin\app-unsigned.apk
-[DEBUG] from resource zip => assets/Resources/images/loading.jpg
-[DEBUG] from resource zip => assets/Resources/images/logo.jpg
-[DEBUG] from resource zip => assets/Resources/images/splash.jpg
-[DEBUG] from resource zip => assets/Resources/KS_nav_ui.png
-[DEBUG] from resource zip => assets/Resources/KS_nav_views.png
-[DEBUG] from resource zip => assets/Resources/additem.js
-[DEBUG] from resource zip => assets/Resources/app.js
-[DEBUG] from resource zip => assets/Resources/appicon.png
-[DEBUG] from resource zip => assets/Resources/default.png
-[DEBUG] from resource zip => assets/Resources/detail.js
-[DEBUG] from resource zip => assets/Resources/login.js
-[DEBUG] from resource zip => assets/Resources/logout.js
-[DEBUG] from resource zip => assets/Resources/overview.js
-[DEBUG] from resource zip => assets/Resources/register.js
-[DEBUG] from resource zip => assets/tiapp.xml
-[DEBUG] from resource zip => res/drawable/appicon.png
-[DEBUG] from resource zip => res/drawable/background.png
-[DEBUG] from resource zip => res/drawable/facebook_icon.png
-[DEBUG] from resource zip => res/drawable/facebook_login.png
-[DEBUG] from resource zip => res/drawable/facebook_login_down.png
-[DEBUG] from resource zip => res/drawable/facebook_login_wide.png
-[DEBUG] from resource zip => res/drawable/facebook_login_wide_down.png
-[DEBUG] from resource zip => res/drawable/facebook_logout.png
-[DEBUG] from resource zip => res/drawable/facebook_logout_down.png
-[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
-[DEBUG] from resource zip => AndroidManifest.xml
-[DEBUG] from resource zip => resources.arsc
-[DEBUG] from resource zip => res/drawable-hdpi/facebook_icon.png
-[DEBUG] from resource zip => res/drawable-ldpi/facebook_icon.png
-[DEBUG] from resource zip => res/drawable-long-land-hdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-long-land-ldpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-long-port-hdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-long-port-ldpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-land-ldpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-land-mdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-port-ldpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/default_d44e27d97b.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\smalljs.jar => org/mozilla/javascript/resources/Messages.properties
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\smalljs.jar => org/mozilla/javascript/resources/Messages_fr.properties
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\modules\titanium-yahoo.jar => ti/modules/titanium/yahoo/yahoo.js
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/apache/Commons-NOTICE.txt
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/apache/HttpComponents-NOTICE.txt
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/apache/mime4j-NOTICE.txt
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/build.properties
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/background.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\modules\titanium-facebook.jar => ti/modules/titanium/facebook/LICENSE
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
-[DEBUG] from JAR C:\Users\Mike\AppData\Roaming\Titanium\mobilesdk\win32\1.7.3\android\modules\titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
-[DEBUG] Waiting for device to be ready ...
-[TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.031000 seconds on emulator to get ready
-[INFO] Installing application on device
+[INFO] Re-launching application ... MobileApp
 [INFO] Launching application ... MobileApp
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.yourcompanyname.mobileapp/.MobileappActivity }
+Warning: Activity not started, its current task has been brought to the front
 
-[INFO] Deployed MobileApp ... Application should be running.

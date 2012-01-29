@@ -1,9 +1,6 @@
 Titanium.UI.currentWindow.setBackgroundColor('#000');
 
-/* =======================================
- * Data from project.js as currentWindow
- * ======================================= */
-
+// Gegevens van aangeklikte lijstitem doorgeven en invullen
 var from = Titanium.UI.currentWindow.from;
 var to = Titanium.UI.currentWindow.to;
 var message = Titanium.UI.currentWindow.message;
@@ -74,11 +71,12 @@ var btnBack = Ti.UI.createButton({
   left: 15,
 });
 
+// Terug naar inbox
 btnBack.addEventListener('click', function(e){
   var winInbox = Titanium.UI.createWindow({  
     backgroundColor:'000',
     url:'overview.js',
-    name: from
+    name: to
   });
   winInbox.open();
 });

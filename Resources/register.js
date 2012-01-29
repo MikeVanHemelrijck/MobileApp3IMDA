@@ -68,6 +68,7 @@ var btnBack = Ti.UI.createButton({
   left: 15, 
 })
 
+// Registreer-request aanmaken
 var loginReq = Titanium.Network.createHTTPClient();  
 
 loginReq.onload = function()  
@@ -75,7 +76,7 @@ loginReq.onload = function()
     alert("Succesfully registered!");
     txtPassword.value="";
     txtUsername.value="";
-    
+    // Naar login gaan na het registreren
     var winLogin = Titanium.UI.createWindow({  
     backgroundColor:'#000',
     url:'login.js',
@@ -95,6 +96,7 @@ btnregister.addEventListener('click',function(e)
 {
     if (txtUsername.value != '' && txtPassword.value != '')
     {
+    // Registreer-request verzenden
        loginReq.open('GET','http://www.vhdesign.be/School/Mobiel/register.php?username='+txtUsername.value+'&password='+txtPassword.value);
        loginReq.send();
     }

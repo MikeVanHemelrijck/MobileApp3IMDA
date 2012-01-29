@@ -1,9 +1,5 @@
 Titanium.UI.currentWindow.setBackgroundColor('#000');
 
-/* =======================================
- * Data from overview.js as currentWindow
- * ======================================= */
-
 var id = Titanium.UI.currentWindow.id;
 var name = Titanium.UI.currentWindow.name;
 
@@ -22,11 +18,12 @@ var label1 = Ti.UI.createLabel({
   font:{fontSize:26,fontWeight:'bold'}
 });
 
-
+// table aanmaken
 var table = Ti.UI.createTableView({
   top: 60
 });
 
+// Bij click op lijstitem de detailpagina openen
 table.addEventListener("click", function(e) {
 	
 	var win = Titanium.UI.createWindow({
@@ -42,10 +39,12 @@ table.addEventListener("click", function(e) {
 	
 });
 
+// Message request maken + verzenden
 var overviewReq = Titanium.Network.createHTTPClient();  
 overviewReq.open('GET','http://www.vhdesign.be/School/Mobiel/overview.php?username=' + name); 
 overviewReq.send();
 
+// Lijst opvullen
 overviewReq.onload = function()  
 {  
     var json = this.responseText; 
